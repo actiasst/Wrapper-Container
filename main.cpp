@@ -20,7 +20,7 @@ public:
 	}
 
 	void printValues() {
-		std::cout << a << " " << b << " " << c << std::endl;
+		cout << a << " " << b << " " << c << endl;
 	}
 };
 
