@@ -30,7 +30,7 @@ class Wrapper {
 public:
 	Wrapper() : wrappedValue{ new ActualValue } { }
 
-	ActualValue* getActualValue() {
+	ActualValue*& getActualValue() {
 		return wrappedValue;
 	}
 
@@ -47,7 +47,7 @@ public:
 	Container() : size{ 10 },
 		actualValueArray{ new Wrapper[size] } { }
 
-	ActualValue* operator[](const size_t index) {
+	ActualValue*& operator[](const size_t index) {
 		return actualValueArray[index].getActualValue();
 	}
 
